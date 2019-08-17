@@ -1,0 +1,10 @@
+name: sentimentanalysis
+title:
+username:
+account: takeshsahu
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 233849
+bundleId: 1068306
+url: https://takeshsahu.shinyapps.io/sentimentanalysis/
+when: 1510289932.73087

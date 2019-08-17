@@ -1,0 +1,42 @@
+<p><strong>What are your observations of the 2 word clouds you generated in 3 and 5?</strong></p>
+<p>Stop words affect the word cloud as their frequency is high, which clutters the word cloud. This is one of the reason to normalize the raw data. <p>
+
+
+<p><strong>Is there any correlation between the sentiment score and the product rating? </strong></p>
+<p>From the showed scatterplots for the top 6 most reviewed products, the sentiment score and the product rating are not properly correlated. It has high bias and high variance.</p>
+<p><strong>What are your thoughts or recommendations on the sentiment analysis work that you have done. </strong></p>
+<ul>
+<li>Sentiment analysis is very important because it helps the organization to understand their customer sentiment and enable them to plan the best long-term strategies, improve product quality and customer service based on their feedbacks.</li>
+<li>After performing the sentiment analysis, we can notice that it hardly represents the exact sentiment for a given product unless the product review is too good or vice versa.</li>
+<li>One of the main challenges with understanding sentiment and opinions, is the complexities involved in how we express our thoughts and opinions, and form a feedback.</li>
+<li>Currently defined and practiced sentiment analysis is not well-defined a task and it requires redefining the problem.&nbsp;</li>
+<li>Sentiment analysis typically classify sentences as "positive" or "negative", but a comparison such as <em>&ldquo;intel core i7 8<sup>th</sup> gen processor is better than intel core i7 7<sup>th</sup> gen processor</em>," which is neither positive or negative. The solution requires a more in-depth look at the linguistic structure, both syntactic and semantic, of sentiment.</li>
+<li>Applying various prediction models with input features such as cosine similarity between reviews, TF-IDF, etc. will help in getting better accuracy.</li>
+</ul>
+<p><strong>How can we improve sentiment analysis?</strong></p>
+<p>To improve sentiment analysis, we need to consider the following:</p>
+<ul>
+<li>Pay attention to non-word "emotional" tokens, e.g., &ldquo;:(&rdquo;, &ldquo;:-)" and ":D" when doing feature extraction.</li>
+<li>Can&rsquo;t rely on only the &ldquo;polar&rdquo; words such as good, bad, like, etc. We also need to take their context, and the general structure of the sentence into account, to make better judgements.</li>
+<li>Sentiment analysis is governed by the score dictionary(word list) used. In this project, AFINN provides the sentiment scores. By changing the dictionary, score will change. By using different dictionaries sentiment analysis can be improved. </li>
+</ul>
+<p><strong>What modifications to the text did you have to do (if any) before performing sentiment analysis?</strong></p>
+<p>Modifications to the text before performing sentiment analysis involves cleaning of the raw data, removing any characters that are not letters, lowercasing everything, and getting rid of additional spaces between words before tokenizing the resulting text and returning a vector of individual words.</p>
+<p>Steps involved are as follows:</p>
+<p><strong>Step-1: Cleaning of the raw text data</strong></p>
+<ul>
+<li>Stop Word Removal</li>
+	<ul><li>Refers to the most common words in language, such as &ldquo;a", "the&rdquo; that are irrelevant</li>
+	<li>To make the process more effective, these words are dropped at the first place</li></ul>
+<li>Removal of punctuations such as comma, dash, etc.</li>
+<li>Removal of numbers</li>
+<li>Conversion of uppercase to lower case</li>
+<li>Removal of various symbols</li>
+</ul>
+<p>This is performed to increase computation efficiency as these have no contribution in getting the sentiment score.</p>
+<p><strong>Step-2: Tokenization - </strong>Process of splitting up a sequence of strings into pieces such as words, keywords, phrases, symbols and other elements called tokens. Tokens can be individual words, phrases or even whole sentences.</p>
+<p>Here, the <strong>tokenization of word</strong> is performed to get the sentiment score after stemming or lemmatization.</p>
+<p><strong>Step-3: Lemmatization - </strong>Process for reducing inflected words to their root form.</p>
+<p>e.g. better ---&gt; good, brought ---&gt; buy</p>
+<p>Here, <strong>lemmatization of words</strong> is performed.</p>
+<p>Note: step-2 and step-3 are interchangeable i.e. after cleaning the raw data, we will have a vector of strings for each review (in our case) &agrave; perform <strong>lemmatization of string, </strong>will return the root word for each inflected word in a string <strong>&agrave; </strong>perform tokenization.</p>

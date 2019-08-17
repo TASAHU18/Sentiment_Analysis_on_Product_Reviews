@@ -1,0 +1,5 @@
+.content-wrapper,.right-side {
+ min-height:100%;
+ background-color:#ffffff !important;
+ z-index:800
+}
